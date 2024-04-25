@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  namespace: your-namespace   # Add the namespace here
+  namespace: nginx   # Add the namespace here
 spec:
   replicas: 3
   selector:
@@ -23,7 +23,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace: your-namespace   # Add the namespace here
+  namespace: nginx   # Add the namespace here
 spec:
   selector:
     app: nginx
