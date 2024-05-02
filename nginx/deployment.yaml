@@ -25,11 +25,10 @@ metadata:
   name: nginx-service
   namespace: nginx
 spec:
+  type: LoadBalancer
   selector:
     app: nginx
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
-      nodePort: 30080   # Specify the NodePort value here
-  type: NodePort       # Set the service type to NodePort
+      targetPort: 8005
